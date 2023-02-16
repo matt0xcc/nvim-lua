@@ -78,7 +78,9 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'mg979/vim-visual-multi'
   use 'tpope/vim-surround'
-  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'b3nj5m1n/kommentary'
+
   use {
     'MattesGroeger/vim-bookmarks',
     'tom-anders/telescope-vim-bookmarks.nvim'

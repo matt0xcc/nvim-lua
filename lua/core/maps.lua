@@ -38,13 +38,13 @@ keymap.set('n', '<Leader>yp', "<cmd>let @+ = expand('%:p:h')", { silent = true }
 keymap.set('n', '<Leader>w', '<cmd>w<cr>', { silent = true })
 keymap.set('n', '<Leader>q', '<cmd>q<cr>', { silent = true })
 keymap.set('n', '<Leader>.',
-  function()
-    if vim.opt.list:get() then
-      vim.cmd("set nolist")
-    else
-      vim.cmd("set list")
-    end
-  end, { silent = true })
+    function()
+      if vim.opt.list:get() then
+        vim.cmd("set nolist")
+      else
+        vim.cmd("set list")
+      end
+    end, { silent = true })
 
 -- Plugins --
 
@@ -69,9 +69,13 @@ keymap.set('n', '<Leader>ca', '<cmd>Lspsaga code_action<cr>', { silent = true })
 keymap.set('n', '<Leader>rn', '<cmd>Lspsaga rename<cr>', { silent = true })
 
 -- telescope
-keymap.set('n', '<Leader>/', '<cmd>Telescope live_grep<cr>', { silent = true })
+keymap.set('n', '<Leader>sg', '<cmd>Telescope live_grep<cr>', { silent = true })
 keymap.set('n', '<Leader>sd', '<cmd>Telescope treesitter<cr>', { silent = true })
 keymap.set('n', '<Leader>sf', '<cmd>Telescope find_files<cr>', { silent = true })
+
+-- comment
+keymap.set('n', '<Leader>/', '<Plug>kommentary_line_default', { silent = true })
+keymap.set('x', '<Leader>/', '<Plug>kommentary_visual_default', { silent = true })
 
 -- formatting
 keymap.set('n', '<Leader>ff', '<cmd><cr>', { silent = true })
