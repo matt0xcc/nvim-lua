@@ -1,7 +1,7 @@
 local profile = os.getenv("ITERM_PROFILE")
 local theme
 if profile == "light" then
-  theme = 'tomorrow'
+  theme = 'auto'
 else
   theme = 'everforest'
 end

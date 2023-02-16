@@ -1,7 +1,14 @@
 local gitsigns = require("gitsigns")
 
+local signcolumn
+if os.getenv("ITERM_PROFILE") == "light" then
+  signcolumn = false
+else
+  signcolumn = true
+end
+
 gitsigns.setup({
-  signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
+  signcolumn = signcolumn, -- Toggle with `:Gitsigns toggle_signs`
   numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
   linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
   word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
