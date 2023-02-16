@@ -36,8 +36,8 @@ opt.ignorecase = true
 opt.smartcase = true
 
 opt.foldenable = true
-opt.foldlevel = 5
-opt.foldlevelstart = 5
+opt.foldlevel = 99
+opt.foldlevelstart = 99
 opt.foldcolumn = '0'
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
@@ -55,11 +55,11 @@ opt.fillchars = "eob: "
 opt.spelllang = "en"
 opt.list = false
 opt.listchars = {
-	tab = "↔ ",
-	eol = "↩",
-	space = ".",
-	extends = "◀",
-	precedes = "▶",
+  tab = "↔ ",
+  eol = "↩",
+  space = ".",
+  extends = "◀",
+  precedes = "▶",
 }
 
 
