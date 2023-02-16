@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use {
@@ -55,20 +55,20 @@ return require('packer').startup(function(use)
 
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
-    'rafamadriz/friendly-snippets',  -- add friendly-snippets
+    'rafamadriz/friendly-snippets', -- add friendly-snippets
   }
 
   use {
     "glepnir/lspsaga.nvim",
     branch = "main",
     requires = {
-      {"nvim-tree/nvim-web-devicons"},
-      {"nvim-treesitter/nvim-treesitter"}
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" }
     }
   }
 
   use {
-    "akinsho/toggleterm.nvim", tag = '*', 
+    "akinsho/toggleterm.nvim", tag = '*',
     config = function()
       require("toggleterm").setup()
     end
@@ -88,7 +88,7 @@ return require('packer').startup(function(use)
     requires = 'kevinhwang91/promise-async'
   }
   use 'Vonr/align.nvim'
- 
+
 
   -- prettier
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -98,6 +98,7 @@ return require('packer').startup(function(use)
   -- theme
   use 'sainnhe/everforest'
   use 'xiyaowong/nvim-transparent'
+  use 'matt0xcc/Onehalf-Vim'
   use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
@@ -107,4 +108,3 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
-

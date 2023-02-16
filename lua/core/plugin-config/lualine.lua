@@ -1,7 +1,15 @@
+local profile = os.getenv("ITERM_PROFILE")
+local theme
+if profile == "light" then
+  theme = 'tomorrow'
+else
+  theme = 'everforest'
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'everforest',
+    theme = theme,
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = {
