@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
   -- theme
   use 'sainnhe/everforest'
   use 'xiyaowong/nvim-transparent'
-  use 'matt0xcc/Onehalf-Vim'
+  use 'matt0xcc/onehalf-vim'
   use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
