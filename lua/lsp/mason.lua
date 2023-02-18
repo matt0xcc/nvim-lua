@@ -32,11 +32,30 @@ require("lspconfig").bashls.setup {
   },
 }
 
+local clangd_capabilities = capabilities
+
+clangd_capabilities.textDocument.semanticHighlighting = true
+clangd_capabilities.offsetEncoding = "utf-8"
+
 require("lspconfig").clangd.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  capabilities = clangd_capabilities,
 
-  settings = {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--pch-storage=memory",
+    "--clang-tidy",
+    "--suggest-missing-includes",
+    "--cross-file-rename",
+    "--completion-style=detailed",
+  },
+
+  init_options = {
+    clangdFileStatus = true,
+    usePlaceholders = true,
+    completeUnimported = true,
+    semanticHighlighting = true,
   },
 }
 

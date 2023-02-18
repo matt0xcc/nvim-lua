@@ -3,7 +3,6 @@ require("mason-tool-installer").setup({
     'lua-language-server',
     'vim-language-server',
     'prettier',
-    'codespell',
     'cpplint',
     'gitlint',
     'clang-format'
