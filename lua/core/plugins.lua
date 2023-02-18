@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- lsp configure
   use {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     'williamboman/mason.nvim',
@@ -52,6 +53,7 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-buffer',
     'hrsh7th/nvim-cmp',
     'onsails/lspkind-nvim',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
 
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',

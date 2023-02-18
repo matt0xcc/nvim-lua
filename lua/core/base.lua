@@ -62,7 +62,7 @@ opt.listchars = {
   precedes = "▶",
 }
 
-
+opt.backup = false
 opt.spell = false
 
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -74,12 +74,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end
 })
 
-opt.updatetime = 300
+opt.updatetime = 200
 opt.timeoutlen = 1000
 opt.ttimeoutlen = 0
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.api.nvim_command(':filetype plugin on')
 
 opt.shortmess = { s = true, I = true }
 opt.showmode = false

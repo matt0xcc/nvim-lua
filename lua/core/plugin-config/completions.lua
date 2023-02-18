@@ -5,13 +5,11 @@ local lspkind = require('lspkind')
 local vscode = require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
-  
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
-
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-c>'] = cmp.mapping.abort(),
@@ -24,14 +22,13 @@ cmp.setup({
       end
     end, { "i", "s" }),
     ['<c-b>'] = cmp.mapping(function(fallback)
-      if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
+      if luasnip.jumpable( -1) then
+        luasnip.jump( -1)
       else
         fallback()
       end
     end, { "i", "s" })
   }),
-
   sources = cmp.config.sources({
     { name = 'nvim_lsp',
       entry_filter = function(entry)
@@ -41,8 +38,7 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
   }, {
     { name = 'buffer' },
-  }),
-
+  }, { name = 'nvim_lsp_signature_help' }),
   formatting = {
     format = function(entry, vim_item)
       if vim.tbl_contains({ 'path' }, entry.source.name) then

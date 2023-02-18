@@ -6,6 +6,7 @@ require("mason-tool-installer").setup({
     'codespell',
     'cpplint',
     'gitlint',
+    'clang-format'
   },
   auto_update = true
 })

@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap
 
 -- windows:
-keymap.set('n', '<leader>ss', ':vsplit<Return><C-w>w', { silent = true })
+keymap.set('n', '<leader>sv', ':vsplit<Return><C-w>w', { silent = true })
 
 keymap.set('n', '<leader>=', ':vertical resize +5<cr>', { silent = true })
 keymap.set('n', '<leader>-', ':vertical resize -5<cr>', { silent = true })
@@ -38,13 +38,13 @@ keymap.set('n', '<Leader>yp', "<cmd>let @+ = expand('%:p:h')", { silent = true }
 keymap.set('n', '<Leader>w', '<cmd>w<cr>', { silent = true })
 keymap.set('n', '<Leader>q', '<cmd>q<cr>', { silent = true })
 keymap.set('n', '<Leader>.',
-    function()
-      if vim.opt.list:get() then
-        vim.cmd("set nolist")
-      else
-        vim.cmd("set list")
-      end
-    end, { silent = true })
+  function()
+    if vim.opt.list:get() then
+      vim.cmd("set nolist")
+    else
+      vim.cmd("set list")
+    end
+  end, { silent = true })
 
 -- Plugins --
 
@@ -69,7 +69,7 @@ keymap.set('n', '<Leader>ca', '<cmd>Lspsaga code_action<cr>', { silent = true })
 keymap.set('n', '<Leader>rn', '<cmd>Lspsaga rename<cr>', { silent = true })
 
 -- telescope
-keymap.set('n', '<Leader>sg', '<cmd>Telescope live_grep<cr>', { silent = true })
+keymap.set('n', '<Leader>ss', '<cmd>Telescope live_grep<cr>', { silent = true })
 keymap.set('n', '<Leader>sd', '<cmd>Telescope treesitter<cr>', { silent = true })
 keymap.set('n', '<Leader>sf', '<cmd>Telescope find_files<cr>', { silent = true })
 
