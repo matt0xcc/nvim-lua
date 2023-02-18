@@ -55,27 +55,27 @@ keymap.set('n', 'z=', require('ufo').openAllFolds, { silent = true })
 keymap.set('n', 'z-', require('ufo').closeAllFolds, { silent = true })
 
 -- lspsaga
-keymap.set('n', '<Leader>gh', '<cmd>Lspsaga hover_doc<cr>', { silent = true })
+keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>', { silent = true })
 -- go to definition
-keymap.set('n', '<Leader>gd', '<cmd>Lspsaga lsp_finder<cr>', { silent = true })
+keymap.set('n', '[d', '<cmd>Lspsaga lsp_finder<cr>', { silent = true })
 -- go to references
-keymap.set('n', '<Leader>gr', require('telescope.builtin').lsp_references, {})
-keymap.set('n', '<Leader>gp', '<cmd>Lspsaga peek_definition<cr>', { silent = true })
-keymap.set('n', '<Leader>ej', '<cmd>Lspsaga diagnostic_jump_next<cr>', { silent = true })
-keymap.set('n', '<Leader>ek', '<cmd>Lspsaga diagnostic_jump_prev<cr>', { silent = true })
+keymap.set('n', '[r', require('telescope.builtin').lsp_references, {})
+keymap.set('n', '[p', '<cmd>Lspsaga peek_definition<cr>', { silent = true })
+keymap.set('n', '[j', '<cmd>Lspsaga diagnostic_jump_next<cr>', { silent = true })
+keymap.set('n', '[k', '<cmd>Lspsaga diagnostic_jump_prev<cr>', { silent = true })
 
-keymap.set('n', '<Leader>ls', '<cmd>Lspsaga outline<cr>', { silent = true })
-keymap.set('n', '<Leader>ca', '<cmd>Lspsaga code_action<cr>', { silent = true })
-keymap.set('n', '<Leader>rn', '<cmd>Lspsaga rename<cr>', { silent = true })
+keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>', { silent = true })
+keymap.set('n', '[c', '<cmd>Lspsaga code_action<cr>', { silent = true })
+keymap.set('n', 'rn', '<cmd>Lspsaga rename<cr>', { silent = true })
 
 -- telescope
-keymap.set('n', '<Leader>ss', '<cmd>Telescope live_grep<cr>', { silent = true })
-keymap.set('n', '<Leader>sd', '<cmd>Telescope treesitter<cr>', { silent = true })
-keymap.set('n', '<Leader>sf', '<cmd>Telescope find_files<cr>', { silent = true })
+keymap.set('n', ']s', '<cmd>Telescope live_grep<cr>', { silent = true })
+keymap.set('n', ']d', '<cmd>Telescope treesitter<cr>', { silent = true })
+keymap.set('n', ']f', '<cmd>Telescope find_files<cr>', { silent = true })
 
 -- comment
-keymap.set('n', '<Leader>/', '<Plug>kommentary_line_default', { silent = true })
-keymap.set('x', '<Leader>/', '<Plug>kommentary_visual_default', { silent = true })
+keymap.set('n', '<Leader>//', '<Plug>kommentary_line_default', { silent = true })
+keymap.set('x', '<Leader>//', '<Plug>kommentary_visual_default', { silent = true })
 
 -- formatting
 keymap.set('n', '<Leader>ff', '<cmd><cr>', { silent = true })
