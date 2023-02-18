@@ -58,15 +58,17 @@ keymap.set('n', 'z-', require('ufo').closeAllFolds, { silent = true })
 keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>', { silent = true })
 -- go to definition
 keymap.set('n', '[d', '<cmd>Lspsaga lsp_finder<cr>', { silent = true })
+keymap.set('n', '[p', '<cmd>Lspsaga peek_definition<cr>', { silent = true })
+keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>', { silent = true })
 -- go to references
 keymap.set('n', '[r', require('telescope.builtin').lsp_references, {})
-keymap.set('n', '[p', '<cmd>Lspsaga peek_definition<cr>', { silent = true })
 keymap.set('n', '[j', '<cmd>Lspsaga diagnostic_jump_next<cr>', { silent = true })
 keymap.set('n', '[k', '<cmd>Lspsaga diagnostic_jump_prev<cr>', { silent = true })
-
-keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>', { silent = true })
 keymap.set('n', '[c', '<cmd>Lspsaga code_action<cr>', { silent = true })
 keymap.set('n', 'rn', '<cmd>Lspsaga rename<cr>', { silent = true })
+
+keymap.set('n', '[[', '')
+keymap.set('n', ']]', '')
 
 -- telescope
 keymap.set('n', ']s', '<cmd>Telescope live_grep<cr>', { silent = true })
@@ -76,6 +78,13 @@ keymap.set('n', ']f', '<cmd>Telescope find_files<cr>', { silent = true })
 -- comment
 keymap.set('n', '<Leader>//', '<Plug>kommentary_line_default', { silent = true })
 keymap.set('x', '<Leader>//', '<Plug>kommentary_visual_default', { silent = true })
+
+-- bookmark
+-- mm: add/remove a bookmark at current line
+-- mi: add/edit/remove an annotation at current line
+keymap.set('n', ']b', "<cmd>lua require('telescope').extensions.vim_bookmarks.all()<cr>")
+keymap.set('n', '[b', "<cmd>lua require('telescope').extensions.vim_bookmarks.current_file()<cr>")
+keymap.set('n', 'md', '<cmd>BookmarkClearAll<cr>', { silent = true })
 
 -- formatting
 keymap.set('n', '<Leader>ff', '<cmd><cr>', { silent = true })
