@@ -16,6 +16,29 @@ require("nvim-tree").setup({
   git = {
     enable = false
   },
+  view = {
+    number = false,
+    relativenumber = false,
+    width = 32,
+    signcolumn = "yes",
+    side = "left",
+    hide_root_folder = true,
+    mappings = {
+      custom_only = true,
+      list = {
+        { key = "u",    action = "dir_up" },
+        { key = "o",    action = "edit" },
+        { key = "<CR>", action = "edit" },
+        { key = ".",    action = "toggle_dotfiles" },
+        { key = "r",    action = "rename" },
+        { key = "R",    action = "refresh" },
+        { key = "c",    action = "create" },
+        { key = "d",    action = "remove" },
+        { key = "i",    action = "toggle_file_info" },
+        { key = "p",    action = "copy_path" }
+      }
+    },
+  },
   log = {
     enable = true,
     types = {
